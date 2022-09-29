@@ -1,0 +1,10 @@
+dist/
+
+*.aux
+*.idx
+*.log
+*.out
+*.toc
+*.pdf
+
+.DS_Store
