@@ -1,0 +1,23 @@
+name: "build"
+on:
+    release:
+        types: [published]
+    workflow_dispatch:
+jobs:
+    build:
+        name: "Linux Build" 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+            - name: Build LaTeX
+              uses: xu-cheng/latex-action@v2
+              with:
+                working_directory: 2022-23
+                root_file: journal.tex
+            - name: Archive production artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                name: linux
+                path: |
+                    2022-23/*.pdf
