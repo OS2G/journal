@@ -21,4 +21,5 @@ jobs:
               with:
                 name: linux
                 path: |
+                    *.pdf
                     2022-23/*.pdf
