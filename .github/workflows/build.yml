@@ -23,3 +23,14 @@ jobs:
                 path: |
                     *.pdf
                     2022-23/*.pdf
+            - name: Send Mail
+              uses: dawidd6/action-send-mail@v3
+              with:
+                server_address: ${{secrets.EMAIL_HOST}}
+                server_port: 587
+                secure: true
+                subject: The OS2G Journal has been updated!
+                from: OS2G # <os2g@unl.edu>
+                to: tgibbons2@huskers.unl.edu
+                reply_to: os2g@unl.edu
+                attachments: ./2022-23/journal.pdf
