@@ -6,20 +6,21 @@ on:
     workflow_dispatch:
 jobs:
     build:
-        name: "Linux Build" 
+        name: "LaTeX Build" 
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v2
             - name: Build LaTeX
               uses: xu-cheng/latex-action@v2
-              with:
-                working_directory: 2022-23
-                root_file: journal.tex
+            - name: Install Make
+              run: |
+                apt install make
+            - name: Build
+              run: make
             - name: Archive production artifacts
               uses: actions/upload-artifact@v3
               with:
                 name: linux
                 path: |
-                    *.pdf
                     2022-23/*.pdf
