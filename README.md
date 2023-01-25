@@ -24,5 +24,4 @@ Copy `{year}/{entry}/00000000.tex` to `{year}/{entry}/{YYYYMMDD}.tex` and fill o
 
 To compile, run the following command
 
-`pdflatex --output-directory ./dist/ {year}/journal.tex`
-
+`make`

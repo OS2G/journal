@@ -6,5 +6,10 @@ dist/
 *.out
 *.toc
 *.pdf
+*.synctex.gz
+*.ind
+*.fdb_latexmk
+*.fls
+*.ilg
 
 .DS_Store
