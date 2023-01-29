@@ -1,0 +1,200 @@
+\maketitle
+
+\tableofcontents
+\section{Roll Call}
+
+The following officers were present:
+
+\begin{enumerate}
+    \item \president
+    \item \tresurer
+    \item \primaryprogrammer
+    \item \secretary
+\end{enumerate}
+
+No officers were absent
+\\
+Other members present:
+\begin{enumerate}
+    \item Mitch
+    \item Timothy Gibbons
+\end{enumerate}
+
+\section{Standardized Officer Roles}
+    \subsection{President}
+        \begin{itemize}
+            \item Help create meeting ideas
+            \item Lead meetings
+            \item Give content talks at meetings
+        \end{itemize}
+    \subsection{Treasurer}
+        \begin{itemize}
+            \item Keep track of club budget
+        \end{itemize}
+    \subsection{Primary Programmer}
+        \begin{itemize}
+            \item Room reservations
+            \item EPRs
+            \item Update calendar and website
+        \end{itemize}
+    \subsection{Secretary}
+        \begin{itemize}
+            \item Take meeting minutes
+            \item Send out announcements
+            \begin{itemize}
+                \item Discord
+                \item Google group email list
+                \begin{itemize}
+                    \item may encounter problems with non-school emails
+                \end{itemize}
+                \item Bits and Bytes
+                \item Possibly NvolveU?
+                \item We don't want to use too many platforms
+            \end{itemize}
+            
+        \end{itemize}
+
+\section{Recruitment}
+Finding Consistent Members
+    \begin{itemize}
+        \item Build a good reputation
+        \item Advertise to the target audience
+    \end{itemize}
+Finding Consistent \emph{Knowledgeable} Members
+    \begin{itemize}
+        \item Finding what these people want
+        \item Long term this will help to give us knowledgeable officers as well
+    \end{itemize}
+CornHacks
+    \begin{itemize}
+        \item \href{https://unlcornhacks.com/#/home}{CornHacks Website}
+        \item Hackathon over Feb. 4-5
+        \item We could have a table of advisors
+    \end{itemize}
+
+\section{Hack Days}
+Making Hack Days more engaging:
+\begin{itemize}
+    \item Making them similar to the "lab section" of a class
+    \item Shadow the talks we have planned
+\end{itemize}
+
+\section{Meeting Location}
+We may want to move the club to Avery Hall
+\begin{itemize}
+    \item Makes organizing meetings easier
+    \item Gives members a reliable place to meet
+    \item Right in the middle of the Computer Science Department
+\end{itemize}
+A room on the third floor may be best so that there are enough outlets
+
+\section{Meeting Ideas}
+\begin{itemize}
+    \item Cluster Computing - Carl Lundstedt (HCC)
+    \item Speaker from System76
+    \begin{itemize}
+        \item Mitch can connect us to them
+        \item Make Linux laptops
+        \item Made Pop-OS
+    \end{itemize}
+    \item Soup Night Social
+    \item Mitch Lightning Talk
+    \begin{itemize}
+        \item Needs to be recorded
+        \item Talk to Danial Schurr for OS2G specific slides
+    \end{itemize}
+    \item Embedded systems and prototyping crash course (Arduino?)
+    \item "Meta" meeting about learning computer skills efficiently
+    \begin{itemize}
+        \item overview of topics and projects for members to work on
+        \item would give new members somethign to latch on to
+    \end{itemize}
+    \item Lightning Talks?
+    \begin{itemize}
+        \item Mitch?
+        \item Tim? (Game engine - contact GameDev club)
+        \item Aaron?
+        \item Luke?
+        \item Dr. Bauer
+        \item Dr. Balkir or a grad student working with him (RISC-V)
+        \item Alex? (ScropTheOSAdvenduterer)
+    \end{itemize}
+\end{itemize}
+
+\section{Long Term Goals}
+Consolidate all the club's organizational material in one place:
+\begin{itemize}
+    \item Put it all on SharePoint
+    \item Organize the resources on SharePoint
+\end{itemize}
+Putting valuable information on the club's GitHub and website 
+\begin{itemize}
+    \item can we convince general members to add these things?
+\end{itemize}
+
+\section{Tentative Meeting Schedule}
+Jan 27 - Welcome back 
+\begin{itemize}
+    \item Probably just for returning members
+\end{itemize}
+Feb 3 - \underline{Talk}
+\begin{itemize}
+    \item Programming Languages
+    \item Meta Programming Concepts
+    \item Luke will reach out to Bourke
+\end{itemize}
+Feb 10 - \underline{Workshop}
+\begin{itemize}
+    \item Python?
+    \item C
+    \item Java Crash Course
+\end{itemize}
+Feb 17 - \underline{HackDay} (Soup Day)
+Feb 24 - \underline{Talk} by Mitch
+\begin{itemize}
+    \item What's in a Name?
+\end{itemize}
+Mar 3 - \underline{Workshop}
+\begin{itemize}
+    \item TBD by Mitch
+\end{itemize}
+Mar 10 - \underline{HackDay}
+\begin{itemize}
+    \item LAN Party???
+\end{itemize}
+Mar 24 - \underline{Talk}
+\begin{itemize}
+    \item Embedded Systems?
+    \item Arduino?
+    \item Bauer
+\end{itemize}
+Mar 31 - \underline{Workshop} 
+\begin{itemize}
+    \item Embedded System Project
+\end{itemize}
+Apr 7 - \underline{HackDay} (Social)
+Apr 14 - \underline{Talk}
+\begin{itemize}
+    \item Server Administration
+    \item Erbey Reach out to Garhand
+\end{itemize}
+Apr 21 - \underline{Workshop} 
+\begin{itemize}
+    \item Server Administration
+\end{itemize}
+Apr 28 - \underline{HackDay} (Ice cream party)
+
+\foreach \YYYY in {2022,...,2023}{%
+    \foreach \MM in {1,2,...,12}{%
+        \foreach \DD in {1,2,...,31}{%
+            \edef\FileName{\YYYY\TwoDigits{\MM}\TwoDigits{\DD}}
+            \IfFileExists{entry/\FileName.tex} {%
+                % \FileName
+                \import{entry/}{\FileName.tex}%
+                \newpage
+            }{%
+                    % files does not exist, so nothing to do
+            }%
+        }%
+    }%
+}%
