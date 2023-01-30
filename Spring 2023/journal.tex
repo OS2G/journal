@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{setspace} 
+\doublespacing
+
+\usepackage[a4paper, margin=0.75in]{geometry}
+
+\usepackage{pgffor}
+\usepackage{import}
+
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    % linkcolor=blue,  %choose some color if you want links to stand out
+}
+
+
+\setlength{\parindent}{0pt}
+
+\title{OS2G Journal Spring 2023}
+\author{ }
+\date{ }
+
+\newcommand{\president}[0]{Erbey Uribe}
+\newcommand{\vicepresident}[0]{Jacob Clouse}
+\newcommand{\tresurer}[0]{Luke Freyhof}
+\newcommand{\primaryprogrammer}[0]{Jacob Clouse}
+\newcommand{\secretary}[0]{Levi Busching}
+
+\newcommand\TwoDigits[1]{%
+   \ifnum#1<10 0#1\else #1\fi
+}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\foreach \YYYY in {2022,...,2023}{%
+    \foreach \MM in {1,2,...,12}{%
+        \foreach \DD in {1,2,...,31}{%
+            \edef\FileName{\YYYY\TwoDigits{\MM}\TwoDigits{\DD}}
+            \IfFileExists{entry/\FileName.tex} {%
+                % \FileName
+                \import{entry/}{\FileName.tex}%
+                \newpage
+            }{%
+                    % files does not exist, so nothing to do
+            }%
+        }%
+    }%
+}%
+\end{document}
