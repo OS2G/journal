@@ -23,7 +23,8 @@ jobs:
               with:
                 name: linux
                 path: |
-                    2022-23/*.pdf
+                    Fall 2022/*.pdf
+                    Spring 2023/*.pdf
             # - name: Send Mail
             #   uses: dawidd6/action-send-mail@v3
             #   with:
