@@ -1,50 +1,3 @@
-\documentclass[12pt]{article}
-
-\usepackage[utf8]{inputenc}
-\usepackage{soul}
-\usepackage{color}
-\usepackage{hyperref}
-\usepackage[margin=1in]{geometry}
-\usepackage{fancyhdr}
-\usepackage{pgffor}
-\usepackage{import}
-\usepackage{makeidx}
-\makeindex
-
-\pagestyle{fancy}
-\lhead{20230224}
-\chead{Meeting Minutes}
-\rhead{OS2G}
-
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
-    }
-
-\newcommand\TwoDigits[1]{%
-   \ifnum#1<10 0#1\else #1\fi
-}
-    
-\urlstyle{same}
-
-\title{OS2G Meeting Minutes 2022/23}
-\author{OS2G Officers}
-\date{February 24, 2022}
-
-\newcommand{\president}[0]{Erbey Uribe}
-%\newcommand{\vicepresident}[0]{}
-\newcommand{\treasurer}[0]{Luke Freyhof}
-\newcommand{\primaryprogrammer}[0]{Jacob Clouse}
-\newcommand{\secretary}[0]{Levi Busching}
-
-\begin{document}
-
-\maketitle
-
 \section*{Roll Call}
 
 \noindent \textsc{present} \textbf{President} - \president \\
@@ -124,20 +77,3 @@ Final Decision: \hl{No meeting March 10}
     \begin{itemize}
         \item Resurrect OS2G YouTube
     \end{itemize}
-
-\foreach \YYYY in {2022,...,2023}{%
-    \foreach \MM in {1,2,...,12}{%
-        \foreach \DD in {1,2,...,31}{%
-            \edef\FileName{\YYYY\TwoDigits{\MM}\TwoDigits{\DD}}
-            \IfFileExists{entry/\FileName.tex} {%
-                % \FileName
-                \import{entry/}{\FileName.tex}%
-                \newpage
-            }{%
-                    % files does not exist, so nothing to do
-            }%
-        }%
-    }%
-}%
-
-\end{document}
